@@ -7,7 +7,7 @@ function BasicExample() {
   return (
     <Navbar expand="lg" className="bg-success">
       <Container>
-        <Navbar.Brand href="#home">Books</Navbar.Brand>
+        <Navbar.Brand href="#home">Witchcraft</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
