@@ -7,6 +7,7 @@ import Title from "./components/title";
 import Navbar from "./components/navbar";
 import MagicWand from "./components/magicWand";
 import Footer from "./components/footer";
+import UserComponent from "./components/userComponent";
 
 function App() {
   const footerApp = "Linkedin";
@@ -15,6 +16,7 @@ function App() {
   const toggleMagic = () => {
     setIsMagic(!isMagic);
   };
+
   return (
     <>
       <div>
@@ -36,7 +38,7 @@ function App() {
           />
         );
       })}
-
+      <UserComponent />
       {/* Props drilling demo */}
       <Footer title={footerApp} />
     </>

@@ -14,6 +14,9 @@ function BasicNavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+            {/* <div style={{ display: "flex", justifyContent: "space-around" }}>
+              <Link to="/">Home</Link>
+            </div> */}
             <Nav.Link href="#home" className="text-white">
               Home
             </Nav.Link>
