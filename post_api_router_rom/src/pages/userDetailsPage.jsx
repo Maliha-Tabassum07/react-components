@@ -7,7 +7,7 @@ const UserDetails = () => {
   const [userDetails, setUserDetails] = useState();
 
   useEffect(() => {
-    axiosInstance.get(`/${userId}`).then((resp) => {
+    axiosInstance.get(`users/${userId}`).then((resp) => {
       const data = resp.data;
       setUserDetails(data);
     });

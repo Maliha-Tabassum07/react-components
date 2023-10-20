@@ -9,7 +9,7 @@ const SearchPage = () => {
   const callUserDetailsApi = () => {
     setLoading(true);
     axiosInstance
-      .get(`/${searchText}`)
+      .get(`users/${searchText}`)
       .then((resp) => {
         const data = resp.data;
         setUserDetails(data);

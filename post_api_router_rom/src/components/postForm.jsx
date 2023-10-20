@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import axiosInstancePost from "../utils/axiosInstance";
+import axiosInstance from "../utils/axiosInstance";
 import { useNavigate } from "react-router-dom";
 
 const PostForm = () => {
@@ -23,8 +23,8 @@ const PostForm = () => {
     };
 
     setIsLoading(true);
-    axiosInstancePost
-      .post("/add", data)
+    axiosInstance
+      .post("posts/add", data)
       .then((resp) => {
         console.log("The Response", resp);
         setIsPostDone(true);
