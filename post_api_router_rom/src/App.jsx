@@ -10,21 +10,22 @@ import AddPost from "./pages/addPost";
 import UserDetailsPage from "./pages/userDetailsPage";
 import UserList from "./components/UserList";
 import Footer from "./components/footer";
+// import Authenticate from "./components/authenticate";
+import SearchPage from "./pages/searchPage";
 
 function App() {
   return (
     <div>
-      {/* <RegistrationForm /> */}
-      {/* <UserList /> */}
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/user" element={<UserList />} />
         <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/post" element={<PostPage />} />
         <Route path="/postAdd" element={<AddPost />} />
+        <Route path="/user" element={<UserList />} />
         <Route path="/user/:userId" element={<UserDetailsPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/users/search" element={<SearchPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

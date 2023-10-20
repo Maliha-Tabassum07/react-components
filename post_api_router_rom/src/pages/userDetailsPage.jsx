@@ -7,9 +7,9 @@ const UserDetails = () => {
   const [userDetails, setUserDetails] = useState();
 
   useEffect(() => {
-    axiosInstance.get(`/users/${userId}`).then((resp) => {
+    axiosInstance.get(`/${userId}`).then((resp) => {
       const data = resp.data;
-      setUserDetails(data.data);
+      setUserDetails(data);
     });
   }, []);
 
@@ -19,7 +19,12 @@ const UserDetails = () => {
     >
       <h1>User details of ID: {userId}</h1>
       <div>
-        <h3>{userDetails?.firstName}</h3>
+        <h3>Name: {userDetails?.firstName}</h3>
+        <h3>Email: {userDetails?.email}</h3>
+        <h3>Gender:{userDetails?.gender}</h3>
+        <h3>Age: {userDetails?.age}</h3>
+        <h3>User Name:{userDetails?.username}</h3>
+        <h3>Date of Birth: {userDetails?.birthDate}</h3>
         <img src={userDetails?.image} />
       </div>
     </div>
